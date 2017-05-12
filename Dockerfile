@@ -1,7 +1,7 @@
-FROM    alpine:3.3
+FROM    debian:jessie
 
 # Build variables
-ENV     FILEBEAT_VERSION 1.1.1
+ENV     FILEBEAT_VERSION 5.4.0
 ENV     FILEBEAT_URL https://download.elastic.co/beats/filebeat/filebeat-${FILEBEAT_VERSION}-x86_64.tar.gz
 
 # Environment variables
