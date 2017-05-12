@@ -1,9 +1,9 @@
 filebeat:
-  image: bargenson/filebeat:latest
+  build: .
   restart: unless-stopped
   volumes:
    - /var/run/docker.sock:/tmp/docker.sock
   environment:
-   - LOGSTASH_HOST=logstash.localdomain
-   - LOGSTASH_PORT=5044
-   - SHIPPER_NAME=aWonderfulName
+   - ELASTICSEARCH_HOST=localhost
+   - ELASTICSEARCH_PORT=9200
+   - SHIPPER_NAME=test
