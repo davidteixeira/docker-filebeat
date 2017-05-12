@@ -14,12 +14,13 @@ if [ "$1" = 'start' ]; then
 
   getRunningContainers() {
 		echo "getRunningContainers"
-    curl --no-buffer -s -XGET --unix-socket /tmp/docker.sock http:/containers/json | python -c "
-import json, sys
-containers=json.loads(sys.stdin.readline())
-for container in containers:
-  print(container)
-"
+		curl --no-buffer -s -XGET --unix-socket /tmp/docker.sock http:/containers/json
+#     curl --no-buffer -s -XGET --unix-socket /tmp/docker.sock http:/containers/json | python -c "
+# import json, sys
+# containers=json.loads(sys.stdin.readline())
+# for container in containers:
+#   print(container)
+# "
   }
 
   getContainerName() {
