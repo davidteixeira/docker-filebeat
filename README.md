@@ -3,7 +3,6 @@ Filebeat is a lightweight, open source shipper for log file data. Filebeat tails
 
 > https://www.elastic.co/products/beats/filebeat
 
-
 # Why this image?
 
 This image uses the Docker API to collect the logs of all the running containers on the same machine and ship them to a Elasticsearch. No need to install Filebeat manually on your host or inside your images. Just use this image to create a container that's going to handle everything for you :-)
