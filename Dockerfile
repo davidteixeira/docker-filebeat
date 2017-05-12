@@ -1,9 +1,5 @@
 FROM    alpine:3.3
 
-# Here we use several hacks collected from https://github.com/gliderlabs/docker-alpine/issues/11:
-# # 1. install GLibc (which is not the cleanest solution at all) 
-
-
 # Build variables
 ENV     FILEBEAT_VERSION 1.1.1
 ENV     FILEBEAT_URL https://download.elastic.co/beats/filebeat/filebeat-${FILEBEAT_VERSION}-x86_64.tar.gz

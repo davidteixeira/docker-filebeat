@@ -47,17 +47,17 @@ print(container['Name'])
     removeContainerFile $CONTAINER
   }
 
-  if [ -n "${LOGSTASH_HOST+1}" ]; then
-    setConfiguration "LOGSTASH_HOST" "$LOGSTASH_HOST"
+  if [ -n "${ELASTICSEARCH_HOST+1}" ]; then
+    setConfiguration "ELASTICSEARCH_HOST" "$ELASTICSEARCH_HOST"
   else
-    echo "LOGSTASH_HOST is needed"
+    echo "ELASTICSEARCH_HOST is needed"
     exit 1
   fi
 
-  if [ -n "${LOGSTASH_PORT+1}" ]; then
-    setConfiguration "LOGSTASH_PORT" "$LOGSTASH_PORT"
+  if [ -n "${ELASTICSEARCH_PORT+1}" ]; then
+    setConfiguration "ELASTICSEARCH_PORT" "$ELASTICSEARCH_PORT"
   else
-    echo "LOGSTASH_PORT is needed"
+    echo "ELASTICSEARCH_PORT is needed"
     exit 1
   fi
 
@@ -88,4 +88,3 @@ print(container['Name'])
 else
   exec "$@"
 fi
-
